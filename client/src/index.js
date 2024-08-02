@@ -10,8 +10,7 @@ import Products from './Products';
 import Services from './Services';
 import Pricing from './Pricing';
 import Contact from './Contact';
-import Webentwicklung from './Webentwicklung';
-import Leadrecherche from './Leadrecherche';
+import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,8 +21,6 @@ root.render(
                     <Route index element={<Home />} />
                     <Route path="about" element={<About />} />
                     <Route path="services" element={<Services />} />
-                    <Route path="services/webentwicklung" element={<Webentwicklung />} />
-                    <Route path="services/leadrecherche" element={<Leadrecherche />} />
                     <Route path="pricing" element={<Pricing />} />
                     <Route path="contact" element={<Contact />} />
                     <Route path="products" element={<Products />} />
@@ -32,3 +29,5 @@ root.render(
         </Router>
     </React.StrictMode>
 );
+
+reportWebVitals();

@@ -1,0 +1,109 @@
+/* src/Services.css */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Verhindert horizontales Scrollen */
+}
+
+.services-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.intro-section,
+.nav-section {
+    width: 100vw; /* Volle Breite des Viewports */
+    margin-left: calc(-50vw + 50%); /* Zentriert die Sektionen */
+    padding: 2rem; /* Padding hinzufügen, um Inhalt nicht an den Rand zu drücken */
+    box-sizing: border-box;
+}
+
+.intro-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: grey;
+    color: white;
+    padding-top: 4rem; /* Platz für die fixierte Navbar */
+    border-radius: 0; /* Entfernen Sie die Rundung */
+    margin-bottom: 0; /* Entfernen Sie den unteren Rand */
+}
+
+.intro-text {
+    flex: 1;
+    margin-right: 2rem; /* Abstand zwischen Text und Bild */
+}
+
+.intro-text h1 {
+    margin-bottom: 1rem;
+}
+
+.intro-subtitle {
+    color: lightskyblue;
+    margin-bottom: 1rem;
+}
+
+.intro-description {
+    color: lightgrey;
+    margin-bottom: 1rem;
+}
+
+.intro-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Verschieben des Bildes nach rechts */
+}
+
+.intro-image img {
+    max-width: 50%; /* Volle Breite innerhalb des Containers */
+    border-radius: 8px;
+}
+
+.nav-section {
+    background-color: steelblue;
+    padding: 2rem; /* Padding hinzufügen */
+    border-radius: 0; /* Entfernen Sie die Rundung */
+    margin-bottom: 2rem;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    flex-wrap: wrap; /* Icons umbrechen, wenn nicht genug Platz ist */
+}
+
+.nav-item {
+    text-align: center;
+    flex: 1;
+    min-width: 120px; /* Minimale Breite für jedes Icon */
+}
+
+.nav-icon {
+    margin-bottom: 0.5rem;
+}
+
+.service-section {
+    margin-bottom: 4rem;
+    padding: 0 2rem; /* Padding hinzufügen, um Inhalt nicht an den Rand zu drücken */
+    box-sizing: border-box;
+}
+
+.service-section h2 {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-section h2 .icon {
+    margin-right: 0.5rem;
+}
+
+.service-section p {
+    font-size: 1rem;
+    color: grey;
+    line-height: 1.5;
+}
