@@ -1,0 +1,35 @@
+/* src/Footer.css */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    width: 100%;
+    margin-top: auto; /* Lässt den Footer am Ende des flex-containers erscheinen */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 0.5rem 0;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 1rem;
+    margin: 0.5rem 0;
+}
+
+.footer-nav a {
+    color: lightgrey;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+    color: white;
+}

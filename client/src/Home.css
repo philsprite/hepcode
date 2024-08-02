@@ -1,0 +1,111 @@
+/* src/Home.css */
+.App-header {
+    background-color: white;
+    min-height: calc(100vh - 60px); /* Abziehen der Höhe des Footers */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Vertikales Zentrieren des Inhalts */
+    text-align: center; /* Textzentrierung */
+    padding-top: 2rem; /* Verringern Sie das Padding-Top, um den Abstand zu verringern */
+    font-size: calc(10px + 2vmin);
+    color: black;
+}
+
+.small-heading {
+    color: steelblue;
+    margin-bottom: 0.5rem;
+}
+
+.main-heading {
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.description {
+    color: grey;
+    max-width: 600px;
+    margin: 0 auto 1rem; /* Angleichen des unteren Abstands */
+    font-size: 1rem;
+    text-align: center; /* Textzentrierung */
+}
+
+.cta-button {
+    background-color: steelblue;
+    color: white;
+    border: 1px solid steelblue; /* Fügen Sie die Grenze hinzu, um die Höhe zu stabilisieren */
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+    margin: 1rem 0 2rem; /* Angleichen des oberen und unteren Abstands */
+}
+
+.cta-button:hover {
+    background-color: white;
+    color: steelblue;
+    border: 1px solid steelblue;
+}
+
+.divider-image {
+    width: 900px; /* Behält die Proportionen des Bildes bei */
+    height: auto; /* Setze die gewünschte Höhe */
+    margin-bottom: 2rem; /* Abstand zur neuen Sektion */
+}
+
+.new-section {
+    padding: 2rem;
+    background-color: white; /* oder eine andere gewünschte Hintergrundfarbe */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Textzentrierung */
+}
+
+.new-section h2 {
+    margin-bottom: 1rem; /* Angleichen des unteren Abstands */
+}
+
+.subdescription {
+    color: grey;
+    max-width: 600px;
+    margin: 0 auto 1rem; /* Angleichen des unteren Abstands */
+    font-size: 1rem;
+    text-align: center; /* Textzentrierung */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px; /* Begrenzung der Breite */
+    margin: 0 auto; /* Zentriert die Grid-Container */
+}
+
+.grid-item {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+.icon {
+    color: steelblue;
+}
+
+.icon:hover {
+    color: darkblue;
+}

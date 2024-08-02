@@ -1,0 +1,82 @@
+/* src/Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: white;
+    border-bottom: 1px solid #eaeaea;
+    position: sticky; /* Sticky Position */
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-logo .hepcode {
+    color: steelblue;
+}
+
+.navbar-logo .solutions {
+    color: grey;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-links a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: grey;
+    transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+    color: steelblue;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    color: grey;
+    white-space: nowrap;
+}
+
+.mockup-button {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: steelblue;
+    color: white;
+    border: 1px solid steelblue; /* Fügen Sie die Grenze hinzu, um die Höhe zu stabilisieren */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+.mockup-button:hover {
+    background-color: white;
+    color: steelblue;
+    border: 1px solid steelblue;
+}
