@@ -1,4 +1,3 @@
-// src/Contact.js
 import React, { useState } from 'react';
 import { FaEnvelope, FaPhone } from 'react-icons/fa';
 import './Contact.css';
@@ -19,6 +18,8 @@ function Contact() {
         message: false
     });
 
+    const [submitSuccess, setSubmitSuccess] = useState(false); // State für Erfolgsmeldung
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -27,7 +28,7 @@ function Contact() {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         const errors = {
@@ -42,8 +43,36 @@ function Contact() {
         const hasErrors = Object.values(errors).some(error => error);
 
         if (!hasErrors) {
-            // Handle form submission
-            console.log('Form submitted', formData);
+            try {
+                const response = await fetch('http://localhost:9000/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                });
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                const result = await response.json();
+                console.log('Form submitted successfully:', result);
+
+                // Reset form after successful submission
+                setFormData({
+                    firstName: '',
+                    lastName: '',
+                    email: '',
+                    website: '',
+                    message: ''
+                });
+
+                // Set success message
+                setSubmitSuccess(true);
+            } catch (error) {
+                console.error('Error submitting form:', error);
+            }
         }
     };
 
@@ -66,6 +95,7 @@ function Contact() {
             </div>
             <div className="contact-form-container">
                 <h1>Kontakt</h1>
+                {submitSuccess && <p className="success-message">Nachricht erfolgreich gesendet!</p>} {/* Erfolgsmeldung */}
                 <form className="contact-form" onSubmit={handleSubmit}>
                     <div className="form-row">
                         <div className="form-group">
